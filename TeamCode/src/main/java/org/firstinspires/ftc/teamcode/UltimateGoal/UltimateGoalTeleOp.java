@@ -286,7 +286,7 @@ public class UltimateGoalTeleOp extends LinearOpMode {
                     hardware.grabber_servo.setPosition(0);
                 }
                 else if (gamepad2.dpad_up) {
-                    hardware.grabber_servo.setPosition(0.8);
+                    hardware.grabber_servo.setPosition(0.5);
                 }
 
             telemetry.update();
