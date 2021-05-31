@@ -87,8 +87,7 @@ public class Hardware {
         arm_motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         grabber_servo = hwMap.get(Servo.class, "grabber_servo");
         grabber_servo.setDirection(Servo.Direction.REVERSE);
-        grabber_servo.setPosition(0.8);
-
+        grabber_servo.setPosition(0.5);
 
     }
 }
