@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.LearnJava;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
@@ -7,7 +8,7 @@ import com.qualcomm.robotcore.util.Range;
 import org.firstinspires.ftc.teamcode.UltimateGoal.Hardware;
 
 @TeleOp(name="Mecanum Drive")
-//@Disabled
+@Disabled
 public class MecanumDrive extends LinearOpMode {
 
     Hardware hardware = new Hardware();

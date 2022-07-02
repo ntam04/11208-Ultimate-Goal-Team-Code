@@ -1,12 +1,14 @@
 package org.firstinspires.ftc.teamcode.UltimateGoal;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 
 @Autonomous(name = "SkystoneAutoCloseParkRed (Blocks to Java)")
+@Disabled
 public class SkystoneAutoCloseParkRed extends LinearOpMode {
 
   private DcMotor front_right_motor;

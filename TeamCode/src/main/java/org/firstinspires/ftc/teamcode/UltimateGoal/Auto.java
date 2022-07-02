@@ -4,6 +4,7 @@ import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.geometry.Vector2d;
 import com.acmerobotics.roadrunner.trajectory.Trajectory;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
@@ -15,6 +16,7 @@ import org.openftc.easyopencv.OpenCvCameraFactory;
 import org.openftc.easyopencv.OpenCvCameraRotation;
 
 @Autonomous(name="Standard Auto")
+@Disabled
 public class Auto extends LinearOpMode {
 
     /*
@@ -72,7 +74,6 @@ public class Auto extends LinearOpMode {
                 .build();
 
 
-
         /*
         Trajectories for no rings
          */
@@ -124,6 +125,7 @@ public class Auto extends LinearOpMode {
         /*
         Trajectories for one ring
          */
+
         //Drives to extra ring *QUESTIONABLE*
         Trajectory driveToExtraRing = drive.trajectoryBuilder(driveToShootingPose.end(), true)
                 .splineTo(new Vector2d(-19,-36), Math.toRadians(197))
@@ -188,6 +190,7 @@ public class Auto extends LinearOpMode {
         /*
         Trajectories for four rings
          */
+
         //Drives from shooting position to Zone C
         Trajectory driveToZoneC = drive.trajectoryBuilder(driveToShootingPose.end())
                 .splineTo(new Vector2d(50,-48), Math.toRadians(0))
