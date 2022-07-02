@@ -1,0 +1,33 @@
+---
+startPose:
+  x: -38.0
+  y: -62.0
+  heading: 4.71238898038469
+startTangent: 0.0
+waypoints:
+- position:
+    x: -28.0
+    y: -35.0
+  heading: 3.6651914291880923
+  tangent: 2.443460952792061
+  interpolationType: "SPLINE"
+- position:
+    x: -60.0
+    y: -52.0
+  heading: 0.0
+  tangent: 4.1887902047863905
+  interpolationType: "SPLINE"
+- position:
+    x: 10.0
+    y: -43.0
+  heading: 0.0
+  tangent: 0.0
+  interpolationType: "LINEAR"
+- position:
+    x: 40.0
+    y: -43.0
+  heading: 0.0
+  tangent: 0.0
+  interpolationType: "LINEAR"
+resolution: 0.25
+version: 1
