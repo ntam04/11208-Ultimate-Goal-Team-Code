@@ -95,6 +95,14 @@ public class BasicDriveTrain extends LinearOpMode {
                 telemetry.addData("Encoder", hardwareBasic.back_left_motor.getCurrentPosition());
                 telemetry.update();
             }
+
+            if (gamepad1.x) {
+                hardwareBasic.intake_motor.setPower(-1);
+            }
+            if (gamepad1.y) {
+                hardwareBasic.intake_motor.setPower(0);
+            }
+
         }
     }
 }

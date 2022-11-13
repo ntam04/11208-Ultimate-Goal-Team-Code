@@ -296,6 +296,7 @@ public class FreightFrenzyTeleOp extends LinearOpMode {
             else {
                 hardwareFreightFrenzy.duck_wheel.setVelocity(0);
             }
+
         }
     }
 }

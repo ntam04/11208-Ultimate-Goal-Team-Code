@@ -11,7 +11,7 @@ public class HardwareBasic {
     public DcMotorEx back_right_motor;
     public DcMotorEx front_left_motor;
     public DcMotorEx back_left_motor;
-
+    public DcMotorEx intake_motor;
 
     HardwareMap hwMap;
 
@@ -29,12 +29,14 @@ public class HardwareBasic {
         front_left_motor = hwMap.get(DcMotorEx.class, "front_left_motor");
         back_left_motor = hwMap.get(DcMotorEx.class, "back_left_motor");
 
+        intake_motor = hwMap.get(DcMotorEx.class, "intake_motor");
         //Reverse direction
         front_right_motor.setDirection(DcMotorSimple.Direction.REVERSE);
-        back_right_motor.setDirection(DcMotorSimple.Direction.FORWARD);
-        back_left_motor.setDirection(DcMotorSimple.Direction.REVERSE);
+        back_right_motor.setDirection(DcMotorSimple.Direction.REVERSE);
+        back_left_motor.setDirection(DcMotorSimple.Direction.FORWARD);
         front_left_motor.setDirection(DcMotorSimple.Direction.FORWARD);
 
+        intake_motor.setDirection(DcMotorSimple.Direction.FORWARD);
         //Set motor powers to 0
         front_right_motor.setPower(0);
         back_right_motor.setPower(0);

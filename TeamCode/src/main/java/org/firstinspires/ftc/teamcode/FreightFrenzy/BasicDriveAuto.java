@@ -4,14 +4,13 @@ import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.geometry.Vector2d;
 import com.acmerobotics.roadrunner.trajectory.Trajectory;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive;
 
 
 @Autonomous(name="Basic Auto")
-@Disabled
+//@Disabled
 public class BasicDriveAuto extends LinearOpMode {
 
     /*
@@ -34,12 +33,30 @@ public class BasicDriveAuto extends LinearOpMode {
         drive.setPoseEstimate(startPose);
 
         Trajectory driveForward = drive.trajectoryBuilder(startPose)
-                .splineTo(new Vector2d(30, 30),0)
+                .splineTo(new Vector2d(-15, 15),0)
+                .build();
+
+        Trajectory driveBackward = drive.trajectoryBuilder(driveForward.end())
+                .splineTo(new Vector2d(0,0),0)
+                .build();
+
+        Trajectory DrSi = drive.trajectoryBuilder(driveBackward.end())
+                .strafeTo(new Vector2d(-25, 0))
+                .build();
+
+        Trajectory Drivele = drive.trajectoryBuilder(DrSi.end())
+                .splineTo(new Vector2d(-16,10),0)
+                .build();
+
+        Trajectory drivefrr = drive.trajectoryBuilder(Drivele.end())
+                .splineTo(new Vector2d(-40, 16), 2)
                 .build();
 
         waitForStart();
 
         drive.followTrajectory(driveForward);
-
+        drive.followTrajectory(DrSi);
+        drive.followTrajectory((Drivele));
+        drive.followTrajectory((drivefrr));
     }
 }
